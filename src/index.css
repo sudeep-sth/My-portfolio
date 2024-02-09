@@ -1,0 +1,193 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+.background {
+  
+  background-image: url("./Assets/edited.png") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon-css{
+  /* background-color: asdf; */
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  color: #0ef;
+}
+
+.icon-css:hover{
+  color: white;
+  background-color: #0ef;
+  box-shadow: 1px 0px 20px #0ef;
+}
+
+.left-right-slide{
+  animation: slideright 1s ease forwards ;
+}
+
+.right-left-slide{
+  animation: slideleft 1s ease forwards;
+  animation-delay: 0.7s * var(--i);
+}
+
+.buttom-top-slide{
+  animation: slideup 1s ease forwards;
+}
+.icon-edit-inside{
+  font-size: 50px;
+  font-weight: 700;
+
+}
+
+
+
+/* skill bar line css  start*/
+
+
+
+.skill-bar-outer {
+  /* width: 50%; */
+  background-color: #eee;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  transition: width 0.5s ease-in-out;
+}
+
+.skill-bar-inner {
+  height: 10px;
+  line-height: 4px;
+  /* display: flex;
+  align-items: center;
+  justify-content: right;*/
+  padding-right: 2px; 
+  text-align: right;
+  background-color: #4caf50; /* Change the color to your preference */
+  transition: width 1s ease-in-out;
+  border-radius: 100px;
+}
+
+.skill-bar-inner span {
+  display: inline;
+  font-size: 10px; 
+
+  padding: 0 0px;
+}
+
+/* skill bar line css  end*/
+
+
+
+/* circular skill bar line css  start*/
+.animated-circular-skill-bar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+}
+
+.animated-circular-skill-bar.svg {
+  width: 50%;
+  height: 100%;
+  transform: rotate(-90deg);
+} 
+
+.circle {
+  fill: none;
+
+}
+
+.background-circle {
+  stroke: #eee;
+  stroke-width: 10;
+}
+
+.progress-circle {
+  stroke: #4caf50; /* Change the color to your preference */
+  stroke-width: 20;
+  stroke-linecap: round;
+  stroke-dasharray: 314.16; /* 2 * Math.PI * 50 (radius) */
+  animation: progressAnimation 1s ease-in-out forwards;
+}
+
+@keyframes progressAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.skill-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.skill-text span {
+  display: block;
+  color: #4caf50; /* Match the progress circle color */
+  font-weight: bold;
+}
+
+.skill-text span:last-child {
+  color: #333; /* Change the color to your preference */
+  font-size: 14px;
+}
+
+
+/* crcular skill bar line css  end*/
+
+
+
+
+@keyframes slideright {
+  0% {
+      transform: translateX(-100px);
+      opacity:0;
+    }
+  
+    100% {
+      transform: translateX(0px);
+      opacity:1;
+    }
+}
+
+
+@keyframes slideleft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideup {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+}
+
